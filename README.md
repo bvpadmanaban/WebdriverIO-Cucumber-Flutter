@@ -3,12 +3,6 @@ WebdriverIO Flutter Automation Using Appium for Android and iOS
 //TODO
 
 
-
-
-
-
-
-
 Useful Shortcuts
 
 Run before run the test
