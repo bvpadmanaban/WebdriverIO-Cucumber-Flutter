@@ -1,4 +1,7 @@
 import { join } from 'path';
+
+import { generate } from 'multiple-cucumber-html-reporter';
+
 export const config = {
 
     runner: 'local',
@@ -56,7 +59,7 @@ export const config = {
         {
             jsonFolder: './reports/cucumber',
             language: 'en',
-            reportFilePerRetry: false,
+            reportFilePerRetry: true,
         },
     ]
     ],
@@ -201,8 +204,19 @@ export const config = {
      * @param {string}                   uri      path to feature file
      * @param {GherkinDocument.IFeature} feature  Cucumber feature object
      */
-    // afterFeature: function (uri, feature) {
-    // },
+     afterFeature: function (uri, feature) {
+
+        generate({
+          jsonDir: "./reports/cucumber",
+          reportPath: "./reports/cucumber",          
+          customData: {
+            title: "WebdriverIO - Cucumber - Flutter",
+            data: [
+              { label: "Project", value: "BookStore" },
+            ],
+          },
+        });
+     },
     
     /**
      * Runs after a WebdriverIO command gets executed
