@@ -22,7 +22,7 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        'features/**/*.feature'
+        'src/features/**/*.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -54,7 +54,7 @@ export const config = {
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'android',
         browserName: 'Chrome',
-        'appium:deviceName': 'Pixel_8_Pro_API_34',
+        'appium:deviceName': 'Pixel_7_Pro_API_30',//'Pixel_8_Pro_API_34',
         'appium:automationName': 'UiAutomator2',
     }],
 
@@ -116,7 +116,7 @@ export const config = {
                 }
             }
         ],
-        ], //'chromedriver'
+        ], 
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -153,7 +153,7 @@ export const config = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./features/**/*.js'],
+        require: ['./src/stepdefinitions/**/*.js'],
         // <boolean> show full backtrace for errors
         backtrace: true,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
