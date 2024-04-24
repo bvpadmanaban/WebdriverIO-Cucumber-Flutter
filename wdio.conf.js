@@ -7,7 +7,7 @@ export const config = {
     runner: 'local',
     port: 4723,
     specs: [
-        'src/features/flutter/**/*.feature'
+        'src/features/**/*.feature'
     ],
     exclude: [
         // 'path/to/excluded/files'
@@ -65,8 +65,8 @@ export const config = {
     ],
 
     cucumberOpts: {
-        require: ['./src/stepdefinitions/flutter/**/*.js',
-        './src/pageobjects/flutter/**/*.js'],
+        require: ['./src/stepdefinitions/**/*.js',
+        './src/pageobjects/**/*.js'],
         backtrace: true,
         requireModule: [],
         dryRun: false,

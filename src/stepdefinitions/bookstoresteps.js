@@ -1,7 +1,9 @@
 import { Given, When, Then } from '@wdio/cucumber-framework';
 
-import SignInScreen from '../../pageobjects/flutter/signin.screen.js';
-import BookScreen from '../../pageobjects/flutter/books.screen.js';
+import SignInScreen from '../../src/pageobjects/signin.screen.js';
+import BookScreen from '../../src/pageobjects/books.screen.js';
+
+
 
 
 When(/^I signin with (\w+) and (.+)$/, async (username, password) => {
